@@ -58,7 +58,7 @@ function Home() {
       <section 
         className="hero-section"
         style={{ 
-          backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1682129768936-c5b7c3033cdc?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'
+          backgroundImage: 'url("https://images.unsplash.com/photo-1614018453562-77f6180ce036?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")'
         }}
       >
         <div className="hero-content">

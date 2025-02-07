@@ -1,0 +1,25 @@
+{
+  "name": "courier-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hussainn7/courier-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hussainn7/courier-website/issues"
+  },
+  "homepage": "https://hussainn7.github.io",
+  "description": ""
+}

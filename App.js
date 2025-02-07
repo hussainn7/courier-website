@@ -1,34 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Orders from './pages/Orders';
-import Calculator from './pages/Calculator';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Profile from './pages/Profile';
-import './App.css';
-import './index.css';
-import { UserProvider } from './context/UserContext';
+const express = require('express');
+const path = require('path');
+const app = express();
 
-function App() {
-  return (
-    <UserProvider>
-      <Router>
-        <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/calculator" element={<Calculator />} />
-          </Routes>
-        </div>
-      </Router>
-    </UserProvider>
-  );
-}
+// Serve static files from the React build directory
+app.use(express.static(path.join(__dirname, 'build')));
 
-export default App; 
+// Handle all other routes by serving the index.html
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+}); 
